@@ -1,0 +1,11 @@
+
+module my-runc 1.0;
+
+require {
+	type container_runtime_t;
+	type init_t;
+	class bpf prog_run;
+}
+
+#============= container_runtime_t ==============
+allow container_runtime_t init_t:bpf prog_run;
